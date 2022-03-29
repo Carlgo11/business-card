@@ -1,0 +1,7 @@
+{
+  "name": "Card",
+  "short_name": "Card",
+  "scope": "/",
+  "display": "fullscreen",
+  "orientation": "landscape-primary"
+}
