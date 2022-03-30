@@ -5,6 +5,10 @@ h1 {
     text-align: center;
 }
 
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", 'OpenSansLight', "Helvetica Neue", roboto, Helvetica, Arial, sans-serif;
+}
+
 #profile-pic {
     height: 13rem;
     width: 13rem;
@@ -42,6 +46,12 @@ h1 {
 #qrcode > img {
     width: 13rem;
     height: 13rem;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 1.5rem;
+    font-weight: 200;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {

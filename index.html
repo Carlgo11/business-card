@@ -10,6 +10,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/index.css">
   <link rel="manifest" href="manifest.json">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -24,8 +25,18 @@
       <h1>{{ site.github.owner_name | capitalize }}</h1>
     </div>
   </div>
-  <div class="col align-middle row">
-    <div id="qrcode" data-user="{{ site.github.owner_url }}"></div>
+  <div class="col align-middle row" id="socials">
+    <div style="margin:auto">
+      <ul>
+        <li data-url="{{ site.github.owner_url }}"><i class="bi bi-github"></i> {{ site.github.owner_name | capitalize }}</li>
+        <li data-url="https://twitter.com/{{ site.data.socials.twitter }}"><i class="bi bi-twitter"></i> {{ site.data.socials.twitter }}</li>
+        <li data-url="https://reddit.com/u/{{ site.data.socials.reddit }}"><i class="bi bi-reddit"></i> {{ site.data.socials.reddit }}</li>
+        <li data-url="{{ site.data.socials.pgp }}"><i class="bi bi-key-fill"></i> 0x{{ site.data.socials.pgp }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col align-middle row" style="display: none" id="qr">
+    <div id="qrcode"></div>
   </div>
 </div>
 </body>
