@@ -32,7 +32,6 @@ main .col:first-child {
 }
 
 #qrcode {
-    width: min-content;
     margin: auto auto 3rem;
 }
 
