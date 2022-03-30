@@ -1,12 +1,12 @@
-let qrcode = new QRCode("qrcode");
+let qrcode = new QRCode('qrcode');
 
 $('li').click(function () {
-    $("#socials").hide();
-    $("#qr").show();
+    $('#socials').hide();
+    $('#qr').css('display', 'flex');
     qrcode.makeCode($(this).data('url'));
 });
 
 $('#profile-pic').click(() => {
-    $("#socials").show();
-    $("#qr").hide();
+    $('#socials').show();
+    $('#qr').hide();
 });
