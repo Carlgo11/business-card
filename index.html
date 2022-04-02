@@ -26,9 +26,13 @@
     <div class="m-auto">
       <ul>
         <li data-url="{{ site.github.owner_url }}"><i class="bi bi-github"></i> {{ site.github.owner_name | capitalize }}</li>
-        <li data-url="https://twitter.com/{{ site.data.socials.twitter }}"><i class="bi bi-twitter"></i> {{ site.data.socials.twitter }}</li>
-        <li data-url="https://reddit.com/u/{{ site.data.socials.reddit }}"><i class="bi bi-reddit"></i> {{ site.data.socials.reddit }}</li>
-        <li data-url="https://keybase.io/{{ site.data.socials.keybase }}/pgp_keys.asc"><i class="bi bi-key-fill"></i> 0x{{ site.data.socials.pgp }}</li>
+        {%- if site.data.socials.twitter -%}
+          <li data-url="https://twitter.com/{{ site.data.socials.twitter }}"><i class="bi bi-twitter"></i> {{ site.data.socials.twitter }}</li>
+        {%- endif -%}{%- if site.data.socials.reddit -%}
+          <li data-url="https://reddit.com/u/{{ site.data.socials.reddit }}"><i class="bi bi-reddit"></i> {{ site.data.socials.reddit }}</li>
+        {%- endif -%}{%- if site.data.socials.pgp and site.data.socials.keybase -%}
+          <li data-url="https://keybase.io/{{ site.data.socials.keybase }}/pgp_keys.asc"><i class="bi bi-key-fill"></i> 0x{{ site.data.socials.pgp }}</li>
+        {%- endif -%}
       </ul>
     </div>
   </div>
