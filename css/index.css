@@ -63,3 +63,10 @@ li {
         margin: auto;
     }
 }
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background: #000;
+        color: #eee;
+    }
+}
